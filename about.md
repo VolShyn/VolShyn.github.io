@@ -1,4 +1,7 @@
 # About
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+Hi, my name is Volodymyr and this is my credible and incorruptible `blog`.
+I love sports, girls and education. 
+Unfortunately, here I'm talking only about education `_sad trombone_`
+
 
