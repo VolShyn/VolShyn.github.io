@@ -1,7 +1,9 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
+![2023-05-18 13 35 23](https://github.com/VolShyn/StatMat.github.io/assets/78854637/21468939-a878-441e-b33d-727b249c1405)
 
-![Image of fast.ai logo](images/logo.png)
+## StatMat 
 
-## This is a title
+"The best blog i've never read" (c) Elon Musk
 
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
+"Never heard about it, probably some nonsense" (c) Yann LeCun
+
+"Like, subscribe" (c) John McClane
