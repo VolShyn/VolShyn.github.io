@@ -80,13 +80,12 @@ $$
 
 $$
 \text{{median}}(X) = 
-\left\{
-    \begin{array}{ll}
-        X_{\frac{n+1}{2}} & \text{{if }} n \text{{ is odd}} \\
-        \frac{X_{\frac{n}{2}} + X_{\frac{n}{2} + 1}}{2} & \text{{if }} n \text{{ is even}}
-    \end{array}
-\right.
+\begin{array}{ll}
+        X_{\frac{n+1}{2}} & \text{{if }} n \text{{ is odd}}, \\
+        \frac{X_{\frac{n}{2}} + X_{\frac{n}{2} + 1}}{2} & \text{{if }} n \text{{ is even}}.
+\end{array}
 $$
+
 
 В целом медиана часто используется в анализе данных из-за простоты интерпретации.
 
