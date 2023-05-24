@@ -79,11 +79,13 @@ $$
 Медиана `(Median)` - <sub>(ФУНДАМЕНТ, ОСНОВА, ГРУНТ)</sub>. Число в упорядоченном списке, делящее данные на две половины. Робастная оценка, так как учитывает не все данные, что является ее как минусом так и плюсом. 
 
 $$
+\[
 \text{{median}}(X) = 
-\begin{array}{ll}
-        X_{\frac{n+1}{2}} & \text{{if }} n \text{{ is odd}}, \\
-        \frac{X_{\frac{n}{2}} + X_{\frac{n}{2} + 1}}{2} & \text{{if }} n \text{{ is even}}.
-\end{array}
+\begin{{cases}} 
+X_{\frac{n+1}{2}} & \text{{if }} n \text{{ is odd}}, \\
+\frac{X_{\frac{n}{2}} + X_{\frac{n}{2} + 1}}{2} & \text{{if }} n \text{{ is even}}.
+\end{{cases}}
+\]
 $$
 
 
