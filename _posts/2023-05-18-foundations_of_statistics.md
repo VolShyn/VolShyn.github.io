@@ -307,8 +307,9 @@ $$
 2. Вычисляем долю
 
 $$
-F_X(x) = \frac{{\text{количество значений выборки} \leq x}}{{n}}
+F_X(x) = \frac{\text{{количество значений выборки}} \leq x}{n}
 $$
+
 
 ![cdf](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/2ebf0b27-99eb-4f1c-853e-2df9bca481fc)
 
