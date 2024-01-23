@@ -36,7 +36,7 @@ where $\theta_0$, $\theta_1$ are parameters, $ h_\theta(x_i) $ is a hypothesis f
 
 Vector denotation commonly used in NN: 
 
-$$ J(\mathbb{W},\mathbb{B}) = \frac{1}{n} (\hat{Y} - Y)^2.$$
+$$ J(\mathbb{W},\mathbb{B}) = \frac{1}{n} \sum (\hat{Y} - Y)^2.$$
 
 Thus, $\nabla J$ will show the direction of steepest ascent $\vec{d}$, and coefficients in that vector tell which parameter change matters more.
 
