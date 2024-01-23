@@ -28,17 +28,17 @@ _Steps_:
 
 $$ J(\theta_0, \theta_1) = \frac{1}{2n} \sum_{i=1}^{n}(h_\theta(x_i) - y_i)^2 ,$$
 
-where $\theta_0$, $\theta_1$ are parameters, $ h_\theta(x_i) $ is predicted values, and $y_i$ - actual value.
+where $\theta_0$, $\theta_1$ are parameters, $ h_\theta(x_i) $ is a hypothesis function (predicted values), and $y_i$ - actual (target) value.
 
 **Input**: $n$ parameters (e.g. $\theta_n$), i.e. for NN's we must consider all weights and biases 
 
 **Output**: 1 number (the cost)
 
-Vector denotation: 
+Vector denotation commonly used in NN: 
 
-$$ J(w_0, \ldots, w_n) = \frac{1}{n} \sum(\hat{Y}^{(i)} - Y^{(i)})^2.$$
+$$ J(\mathbb{W},\mathbb{B}) = \frac{1}{n} (\hat{Y} - Y)^2.$$
 
-$\nabla J$ will show the direction of steepest ascent $\vec{d}$, and coefficients in that vector tell which parameter change matters more.
+Thus, $\nabla J$ will show the direction of steepest ascent $\vec{d}$, and coefficients in that vector tell which parameter change matters more.
 
 Quick example:
 
@@ -53,8 +53,6 @@ So, we can see, that $\theta_1$ matters more if we want as fast as possible to g
 
 ## GD algorithm:
 
-Let's our initial guess be $\theta_0 = 0.01$ and $\theta_1 = -0.01$, then 
-
 $$ \theta_{n+1} = \theta_n - \alpha \nabla J,  $$
 
 where $\theta_n$ is current value of the parameters, $- \alpha \nabla J$ is a step $\alpha$ (hyperparameter) in the opposite way of $\nabla J$ to get new values $\theta_{n+1}$.
@@ -68,6 +66,28 @@ In context of linear algebra, $\nabla$ maps objective function $ J: \mathbb{R}^n
 Thus, $ \nabla J $ is a vector-valued function (**vector field**). In comparison, $J'$ is a **scalar field** (some sort of heatmap if imagine). 
 
 <sub> Vector-valued function takes a vector as an input and gives vector as an output.<sub>
+
+Before we dive into the process of calculating $\nabla$, it is important to point out, that gradient is computed differently among different models.
+
+Let's calculate $\nabla J$ for linear regression model as: 
+
+$$ \nabla J := \frac{\partial}{\partial\theta}J = \frac{\partial}{\partial\theta}\frac{1}{2n} \sum_{i=1}^{n}(h_\theta(x_i) - y_i)^2,  $$
+
+factor of $\frac{1}{2}$ included to simplify the derivative, as it cancels out the exponent.
+
+Now we apply chain rule:
+
+$$\frac{\partial}{\partial\theta}\frac{1}{2n}(h_\theta(x_i) - y_i)^2 = (h_\theta(x_i) - y_i)\frac{\partial}{\partial\theta}(h_\theta(x_i) - y_i), $$
+
+$$h_\theta(x_i) = \theta^T x_i, $$
+
+$$\frac{\partial}{\partial\theta}(\theta^Tx_i - y_i) = x_i. $$
+
+
+The end result will be:
+
+$$ \alpha \frac{1}{n}\sum_{i=1}^{n}(h_\theta(x_i) - y_i)x_{i}.$$
+
 
 
 # Reading
