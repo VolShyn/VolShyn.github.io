@@ -1,4 +1,4 @@
-# Основы статистики (statistics lifehack note)
+# First try of something (statistics)
 
 
 > Данные - всего лишь исходный материал знаний.
@@ -311,7 +311,7 @@ F_X(x) = \frac{\mathrm{{количество значений выборки}} \
 $$
 
 
-![cdf](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/6c9cfa87-58e9-404a-9a8a-ed1a806ee0ab)
+![cdf](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/9310b2cc-e67e-45f2-adff-83a8026892ca)
 
 
 Функция плотности вероятности `probability density function, pdf` - описывает вероятность того, что случайная величина примет значение в определенном диапазоне. В случае дискретной случайной величины это просто вероятность определенного исхода, а в случае непрерывной случайной величины это вероятность того, что значение попадет в конкретный интервал. Площадь под кривой равна 1!
@@ -327,7 +327,8 @@ $$
 #### Норм. распределение (Гаусса)
 
 *PDF of normal distribution:*
-![image](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/2f03a68c-cbdd-4923-a17c-632d8e51dd69)
+![normal_distr](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/ba818fc0-6d8e-4bc7-8b4e-e703c6bd99ff)
+
 
 $$ f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{1/2(\frac{x - \mu}{\sigma})^2} $$
 
@@ -409,7 +410,8 @@ $$
 
 #### Гамма-распределение
 
-![gamma](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/0750c262-1e5c-4d50-8e7b-fc7d75d08130)
+![gamma_dist](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/23a67d9d-5b1b-4b2b-b0b1-e505ee39cacc)
+
 
 PDF гамма-распределения:
 
@@ -459,7 +461,8 @@ $$
 
 Распределение (множество распределений) нормальной формы, но немного толще и длиннее в хвостах. Используется для оценки распределения средних значений при работе с выборками. Поскольку выборка представляет только часть генеральной совокупности, оценка среднего значения может иметь некоторую погрешность. t-распределение учитывает эту погрешность и устанавливает распределение, в котором может находиться истинное среднее значение генеральной совокупности. Чем больше выборка, тем больше степеней свободы - тем более нормальную форму принимает t-распределение.
 
-![t-dist](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/518ff9e4-611a-4e9b-b5e1-e4838937d1db)
+![t-dist](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/ca0877b2-a07c-4f7a-a37a-a00ab1674e51)
+
 
 
 $$
@@ -501,7 +504,8 @@ $$
 
 Если перефразировать, с помощью хи-квадрат можно легко сравнить распределение наших данных с нулевой моделью (теоретическим распределением).
 
-![chisq-distr](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/837691a3-3f12-4c8b-9d10-f1b2db953de5)
+![chi-sq](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/ad02780a-b45d-4baf-bfa9-3c5721bfed1c)
+
 
 
 $$
@@ -528,7 +532,8 @@ $$
 PDF(x; d1, d2) = \sqrt{\frac{\frac{d1*x^(d1)*d2^(d2)}{d1*x + d2^(d1+d2)}}{x * B(d1/2, d2/2)}}
 $$
 
-![f-dist](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/1245b269-3802-4fc4-ac0b-de945d2bfa1d)
+![f-dist](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/2d086722-1cfc-420e-80ff-18e7a99db0c1)
+
 
 
 С точки зрения применения, предположим, что вы работаете с двумя наборами данных - один с 10 точками данных и дисперсией 15 (A), а другой с 15 точками данных и дисперсией 10 (B). Вы можете использовать F-тест, чтобы определить, значительно ли отличаются дисперсии.
