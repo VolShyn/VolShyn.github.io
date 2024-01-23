@@ -26,7 +26,7 @@ _Steps_:
 
 ## Objective function ($J$):
 
-$$ J(\theta_0, \theta_1) = \frac{1}{2n} \sum_{i=1}^{n}(h_\theta(x_i) - y_i)^2 ,$$
+$$ MSE = J(\theta_0, \theta_1) = \frac{1}{2n} \sum_{i=1}^{n}(h_\theta(x_i) - y_i)^2 ,$$
 
 where $\theta_0$, $\theta_1$ are parameters, $ h_\theta(x_i) $ is a hypothesis function (predicted values), and $y_i$ - actual (target) value.
 
@@ -65,7 +65,7 @@ In context of linear algebra, $\nabla$ maps objective function $ J: \mathbb{R}^n
 
 Thus, $ \nabla J $ is a vector-valued function (**vector field**). In comparison, $J'$ is a **scalar field** (some sort of heatmap if imagine). 
 
-<sub> Vector-valued function takes a vector as an input and gives vector as an output.<sub>
+<sub> Vector-valued function takes a vector as an input and gives a vector as an output.<sub>
 
 Before we dive into the process of calculating $\nabla$, it is important to point out, that gradient is computed differently among different models.
 
@@ -75,7 +75,7 @@ $$ \nabla J := \frac{\partial}{\partial\theta}J = \frac{\partial}{\partial\theta
 
 factor of $\frac{1}{2}$ included to simplify the derivative, as it cancels out the exponent.
 
-Now we apply chain rule:
+Now we apply the chain rule:
 
 $$\frac{\partial}{\partial\theta}\frac{1}{2n}(h_\theta(x_i) - y_i)^2 = (h_\theta(x_i) - y_i)\frac{\partial}{\partial\theta}(h_\theta(x_i) - y_i), $$
 
