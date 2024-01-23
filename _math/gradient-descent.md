@@ -46,7 +46,8 @@ Quick example:
 $$ \vec{d} = \begin{bmatrix} \theta_0 \\ \theta_1 \end{bmatrix} = \begin{bmatrix} -95 \\ -1431 \end{bmatrix}$$  
 
 
-![grad](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/a31f9740-9974-49ff-9fdd-9fa54c5ad77f)
+![grad](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/5230a0fc-cb61-45b5-b70b-caa77596c10f)
+
 
 So, we can see, that $\theta_1$ matters more if we want as fast as possible to get to the minimum of $J$.   
 
