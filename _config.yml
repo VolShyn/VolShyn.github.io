@@ -24,6 +24,8 @@ collections:
     output: true
   python:
     output: true
+  finance:
+    output: true
     
 
 # output: true
