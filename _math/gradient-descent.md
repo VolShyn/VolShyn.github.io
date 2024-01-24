@@ -36,7 +36,7 @@ where $\theta_0$, $\theta_1$ are parameters, $ h_\theta(x_i) $ is a hypothesis f
 
 Vector denotation commonly used in NN: 
 
-$$ J(\mathbb{W},\mathbb{B}) = \frac{1}{n} \sum (\hat{Y} - Y)^2.$$
+$$ J(\mathbb{W},\mathbb{B}) = \frac{1}{n} (\hat{Y} - Y)^2.$$
 
 Thus, $\nabla J$ will show the direction of steepest ascent $\vec{d}$, and coefficients in that vector tell which parameter change matters more.
 
@@ -69,7 +69,7 @@ Thus, $ \nabla J $ is a vector-valued function (**vector field**). In comparison
 
 Before we dive into the process of calculating $\nabla$, it is important to point out, that gradient is computed differently among different models.
 
-Let's calculate $\nabla J$ for linear regression model as: 
+Let's calculate $\nabla J$ for linear regression model: 
 
 $$ \nabla J := \frac{\partial}{\partial\theta}J = \frac{\partial}{\partial\theta}\frac{1}{2n} \sum_{i=1}^{n}(h_\theta(x_i) - y_i)^2,  $$
 
@@ -94,3 +94,4 @@ $$ \alpha \frac{1}{n}\sum_{i=1}^{n}(h_\theta(x_i) - y_i)x_{i}.$$
 
 1. https://en.wikipedia.org/wiki/Gradient
 2. Kevin P.Murphy (2022) Probabilistic Machine Learning: An Introduction 
+
