@@ -1,1 +1,2 @@
-My statistics 📈, AI 🤖 notes 📝
+My math 📈, AI🤖 notes 📝
+

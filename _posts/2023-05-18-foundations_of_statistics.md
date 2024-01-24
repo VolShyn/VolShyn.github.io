@@ -1,5 +1,7 @@
 # First try of something (statistics)
 
+<sub> This post is a joke :)<sub>
+
 
 > Данные - всего лишь исходный материал знаний.
 
