@@ -5,7 +5,7 @@ title: "Necessary concepts for quantitative finance"
 
 # Explanation
 
-This basic concepts are necessary for further learning of financial modelling, e.g. Hull-White model, Black-Karasinski, Nelson Siegel, etc. 
+This basic concepts are necessary for further learning of financial modelling, e.g. Hull-White, Black-Karasinski, Nelson Siegel models, etc. 
 
 All financial assets can be described in some way, either with words, or you can describe them with parameters (mathematically).
 
@@ -21,6 +21,8 @@ There are nominal and real interest rates:
 $$ r = \frac{1 + i}{1 + p} - 1,$$
 
 where $ p $ is the inflation rate, and for short periods of time the linear approximation would be $ r \approx i - p $.
+
+<sub> _Inflation_ corresponds to a reduction in the purchasing power of money, i.e. a general increase in the prices of goods and services.<sub>
 
 ## Maturity 
 
@@ -63,10 +65,37 @@ where $\sigma_d$ is daily volatility.
 
 As a result:
 
-$$ \sigma_{T} = \sigma_d \sqrt{PT} $$
+$$ \sigma_{T} = \sigma_d \sqrt{PT}, $$
 
 <sub> P = 250, assuming there are P trading days. <sub>
 
 Since real price changes exhibit non-Gaussian behavior, alternatives are used, like Lévy distribution or log-returns.
 
+## Bonds 
 
+It's easy to think that bonds are like IOU (I owe you), but for money and in bigger scale.
+
+In my opinion, it is better to give a quick example, that will create a better understanding :
+
+
+* You need money to buy a new oven to bake more goodies
+* Instead of asking the bank, you decide to issue "bread bonds"
+* People can buy these bonds for, say, $100 each.
+* In return, you promise to pay them back:
+   * $100 when the bond matures in 5 years (like getting your money back with interest).
+   * And also, $5 every year as interest (like getting a thank-you slice of cake each year).
+
+Bonds are different from stocks:
+
+* Bonds don't give you ownership of the issuer, like stocks do. You're just a lender.
+* Bonds are generally considered less risky than stocks, but the payoff is also usually lower.
+
+**Clean price**: Base price of the bond, pure value based on what you'll get in the future (payments and payback)
+
+**Black/Model price**: Estimated price of a bond derived using a math model (e.g. Black-Scholes model)
+
+### Yield 
+
+Is essentially the annualized return you get on your investment in a bond. It tells you how much money you can expect to make each year from the bond, factoring in both the interest payments and any change in the bond's price at maturity.
+
+<sub> _Yield Rate_ is just another way to say "yield". So, "bond yield rate" and "yield to maturity" are essentially the same thing. <sub>
