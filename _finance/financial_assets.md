@@ -3,7 +3,7 @@ layout: post
 title: "Financial assets"
 ---
 
-An asset is any resource owned or controlled by a business or an economic entity. It is anything (tangible or intangible) that can be used to produce positive economic value. [^1] 
+An asset is any resource owned or controlled by a business or an economic entity. It is anything (tangible or intangible) that can be used to produce positive economic value. 
 
 # Financial assets
 
@@ -19,10 +19,10 @@ Types:
 * Derivatives, like options and futures
 * Foreign currencies
 
-<sub> Cash (coins, bills) has physical form, however it's still financial assets, because it's value doesn't come from the materials used (paper, metal) but from it's role in the monetary system.  <sub>
+<sub> Cash (coins, bills) has a physical form, however, it's still a financial asset, because its value doesn't come from the materials used (paper, metal) but from its role in the monetary system. <sub>
 
 
-One key point of financial assets, is that they are more **liquid** that physical assets. This means some can easily sell them and convert them into cash.
+One key point of financial assets is that they are more **liquid** than physical assets. This means some can easily sell them and convert them into cash.
 
 **Risk** differs from type-to-type of financial asset. They can be either low-risk or high-risk. Moreover, **returns** will change depending on the risk, from low but stable returns to high but unstable. 
 
@@ -31,7 +31,7 @@ One key point of financial assets, is that they are more **liquid** that physica
 On the other hand there are some other types of assets:
 
 * Physical (real), like land, buildings
-* Intangible, like intelectual property
+* Intangible, like intellectual property
 * Human capital, as skills, experience
 
 
