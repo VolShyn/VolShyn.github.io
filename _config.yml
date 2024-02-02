@@ -22,7 +22,7 @@ plugins:
 collections:
   math: 
     output: true
-  python:
+  coding:
     output: true
   finance:
     output: true
@@ -30,10 +30,10 @@ collections:
 
 # output: true
 
-# titles_from_headings:
-#   enabled:     true
-#   strip_title: true
-#   collections: true
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+  collections: true
 
 highlighter: rouge
 markdown: kramdown
