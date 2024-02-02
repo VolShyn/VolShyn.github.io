@@ -1,20 +1,18 @@
 ---
 layout: post
-title: "Necessary concepts for quantitative financial modelling"
+title: "Necessary concepts for quantitative financial modeling"
 ---
 
 # Explanation
 
 These basic concepts are necessary for further learning of financial modeling, e.g. Hull-White, Black-Karasinski, Nelson Siegel models, etc. 
 
-
-
 All financial assets can be described in some way, either with words, or you can describe them with parameters (mathematically).
 
 ## Interest rate
 
-**Interest** is extra as a compensation for lending money. 
-While **interest rate** is a percentage of borrowed money, that you have to pay.  Usually, interest rate is annualized, and can change over time based on some factors.  
+**Interest** is extra as compensation for lending money. 
+While **interest rate** is a percentage of that rate. Usually, interest rate is annualized, and can change over time based on some factors.  
 
 There are nominal and real interest rates:
 
@@ -33,6 +31,16 @@ For short periods of time the linear approximation would be $ r \approx i - p $.
 
 Or **maturity date**, is the date on which a loan or investment becomes due and the principal amount must be repaid. Longer maturities typically offer higher interest rates but also carry higher risk.
 
+## Term-structure
+
+Describes how much you earn for lending moeny for different durations.
+
+So it is a relationship between interest rates and their corresponding maturities. 
+
+**Short-term** - usually, term that is less than one year. 
+
+**Long-term** - flexible, typically beyond 5 years.
+
 ## Returns 
 
 Is the overall gain or loss (negative return) from an investment, expressed as a percentage of the initial investment. 
@@ -49,7 +57,7 @@ Without reinvestments, return $R$ in some period of time $t$ is called _rate of 
 
 $$ r = \frac{R}{t}.$$ 
 
-Basically, it is right to say, that _returns_ is a kind of metric in financial world.
+Basically, it is right to say, that _returns_ are a kind of metric in the financial world.
 
 ## Volatility
 
@@ -93,11 +101,12 @@ In my opinion, it is better to give a quick example, that will create a better u
    * And also, $5 every year as interest (like getting a thank-you slice of cake each year).
 
 Bonds vs stocks:
-
 * Bonds don't give you ownership of the issuer, like stocks do. You're just a lender.
 * Bonds are generally considered less risky than stocks, but the payoff is also usually lower.
 
-There are many types of bonds, however, we are interested only in parameters of bond.
+**Zero-coupon bond** (discount bond) - type of bonds without periodic interest payments (so-called _coupons_). 
+
+Tbh, there are many types of bonds, however, we are interested only in the parameters of bonds.
 
 **Clean price**: Base price of the bond, pure value based on what you'll get in the future (payments and payback)
 
@@ -105,13 +114,13 @@ There are many types of bonds, however, we are interested only in parameters of 
 
 ### Yield 
 
-In context of bonds yield is expressed as:
+Overall, yield is the return the investor gets from the investment.
+
+In the context of bonds, yield is expressed as:
 
 $$ \gamma = \frac{i}{b_c},  $$
 
 where $ i $ - interest rate, $ b_c$ - current bond price.
-
-Overall, yield is the return investor gets from the investment.
 
 <sub> _Yield Rate_ is just another way to say "yield". So, "bond yield rate" and "yield to maturity" are essentially the same thing. <sub>
 
@@ -130,3 +139,5 @@ A **swaption** is an option to enter into a swap contract at a future date. Unli
 | **Initial Cost** | No upfront cost | Buyer pays a premium |
 | **Flexibility** | Less flexible (fixed terms) | More flexible (option to choose) |
 | **Risk/Reward** | Higher risk and reward potential | Lower risk and reward potential |
+
+**Bermuda swaption** - is like having multiple swaptions bundled together, each with its own pre-defined exercise date throughout the contract's lifespan. This allows large-scale investors to have an option that allows them to change from fixed to floating interest rates on a set schedule.
