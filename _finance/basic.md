@@ -3,7 +3,9 @@ layout: post
 title: "Necessary concepts for quantitative financial modeling"
 ---
 
-# Explanation
+# Necessary concepts for quantitative financial modeling
+
+## Introduction
 
 These basic concepts are necessary for further learning of financial modeling, e.g. Hull-White, Black-Karasinski, Nelson Siegel models, etc. 
 
