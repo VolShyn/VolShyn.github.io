@@ -22,7 +22,7 @@ plugins:
 collections:
   math: 
     output: true
-  python:
+  coding:
     output: true
   finance:
     output: true
