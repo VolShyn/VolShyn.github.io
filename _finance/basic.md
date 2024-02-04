@@ -8,9 +8,7 @@ title: "Necessary concepts for quantitative financial modeling"
 
 ---
 
-# Necessary concepts for quantitative financial modeling
-
-## Introduction
+# Introduction
 
 These basic concepts are necessary for further learning of financial modeling, e.g. Hull-White, Black-Karasinski, Nelson Siegel models, etc. 
 
@@ -40,13 +38,12 @@ Or **maturity date**, is the date on which a loan or investment becomes due and 
 
 ## Term-structure
 
-Describes how much you earn for lending money for different durations.
+A relationship between interest rates and their corresponding maturities.
 
-So it is an relationship between interest rates and their corresponding maturities. 
+_Short-term_ - usually, term that is less than one year. 
 
-**Short-term** - usually, term that is less than one year. 
+_Long-term_ - flexible, typically beyond 5 years.
 
-**Long-term** - flexible, typically beyond 5 years.
 
 ## Returns 
 
