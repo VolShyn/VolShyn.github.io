@@ -8,8 +8,6 @@ title: "Necessary concepts for quantitative financial modeling"
 
 ---
 
-Necessary concepts for quantitative financial modeling
-
 # Introduction
 
 These basic concepts are necessary for further learning of financial modeling, e.g. Hull-White, Black-Karasinski, Nelson Siegel models, etc. 
