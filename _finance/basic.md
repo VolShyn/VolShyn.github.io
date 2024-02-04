@@ -3,7 +3,14 @@ layout: post
 title: "Necessary concepts for quantitative financial modeling"
 ---
 
-# Explanation
+1. TOC
+{:toc}
+
+---
+
+# Necessary concepts for quantitative financial modeling
+
+## Introduction
 
 These basic concepts are necessary for further learning of financial modeling, e.g. Hull-White, Black-Karasinski, Nelson Siegel models, etc. 
 
@@ -33,9 +40,9 @@ Or **maturity date**, is the date on which a loan or investment becomes due and 
 
 ## Term-structure
 
-Describes how much you earn for lending moeny for different durations.
+Describes how much you earn for lending money for different durations.
 
-So it is a relationship between interest rates and their corresponding maturities. 
+So it is an relationship between interest rates and their corresponding maturities. 
 
 **Short-term** - usually, term that is less than one year. 
 
@@ -141,3 +148,8 @@ A **swaption** is an option to enter into a swap contract at a future date. Unli
 | **Risk/Reward** | Higher risk and reward potential | Lower risk and reward potential |
 
 **Bermuda swaption** - is like having multiple swaptions bundled together, each with its own pre-defined exercise date throughout the contract's lifespan. This allows large-scale investors to have an option that allows them to change from fixed to floating interest rates on a set schedule.
+
+
+## Tenor
+
+The length of time ramaining before a financial contract expires

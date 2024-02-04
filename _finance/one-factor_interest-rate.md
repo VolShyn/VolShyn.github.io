@@ -3,6 +3,12 @@ layout: post
 title: "Short-rate models"
 ---
 
+
+1. TOC
+{:toc}
+
+---
+
 # Short-rate models
 Refers to the instantaneous interest rate at a specific point in time. It's essentially the rate you'd pay to borrow money for an infinitesimally small period of time.
 
@@ -32,7 +38,9 @@ It can be estimated by calibrating the models to historical data.
 
 ### SDE
 
-Stochastic differential equation 
+Stochastic differential equation
+
+---
 
 # Vasicek 
 
@@ -45,6 +53,7 @@ $$ dr = a(b - r)dt + \sigma dz, $$
 where $a$ - speed of the mean reversion, $b$ - mean reversion level, $\sigma$ - volatility, they are constant, $dz$ is a **Wiener process** modeling risk factor. 
 
  Short rate here pulled is pulled to a lebel $b$ ar rate $a$.
+
 
 # Hull-White
 
@@ -71,4 +80,6 @@ where
 
 # References 
 
-[^1] https://medium.com/@polanitzer/va%C5%A1%C3%AD%C4%8Dek-1977-model-in-python-predict-the-bank-of-israel-interest-rate-one-year-ahead-using-62b8890f77ab
+1. https://medium.com/@polanitzer/va%C5%A1%C3%AD%C4%8Dek-1977-model-in-python-predict-the-bank-of-israel-interest-rate-one-year-ahead-using-62b8890f77ab
+
+2. https://www.econstor.eu/bitstream/10419/50684/1/584765029.pdf
