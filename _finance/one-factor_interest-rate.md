@@ -78,7 +78,7 @@ where
 
 
 
-# References 
+# Reading
 
 1. https://medium.com/@polanitzer/va%C5%A1%C3%AD%C4%8Dek-1977-model-in-python-predict-the-bank-of-israel-interest-rate-one-year-ahead-using-62b8890f77ab
 
