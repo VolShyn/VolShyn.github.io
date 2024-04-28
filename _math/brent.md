@@ -92,6 +92,8 @@ b = c, \text{ otherwise.}
 \end{cases}$$
 
 
+![plot_15:29:16_2024](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/fb11b48b-dd2c-435c-a810-c3883ce02a75)
+
 
 Guaranteed convergence with $p \approx 1$
 
@@ -105,13 +107,13 @@ It is atleast as good as bisection.
 
 Consider the function $ f(x) $. 
 
-1. **Secant step:** Calculate the secant approximation:
+1. **Secant:** Calculate the secant approximation:
    $$
    s = b - f(b) \cdot \frac{b - a}{f(b) - f(a)}
    $$
    If $ s $ is within $[a, b]$, update either $ a $ or $ b $ based on the sign of $ f(s) $.
 
-2. **Bisection step:** If the secant step does not yield a satisfactory result, or if $ s $ lies outside $[a, b]$, apply the bisection method:
+2. **Bisection:** If the secant step does not yield a satisfactory result, or if $ s $ lies outside $[a, b]$, apply the bisection method:
    $$
    c = \frac{a + b}{2}
    $$
@@ -125,7 +127,7 @@ Brent's method combines the bisection method, the secant method, and inverse qua
 
     Interpolating with parabola, however inverse because root's can be imaginary.
 
-   If $f(a)$, $f(b)$, and $f(c)$ (where $c$ is a previous value in the iteration different from $a$ and $b$) are distinct, use inverse quadratic interpolation:
+   If $f(a)$, $f(b)$, and $f(c)$ (where $c$ is a previous value in the iteration different from $a$ and $b$) are distinct, use IQI:
    $$
    p = \frac{ f(a) f(b) c }{ [f(a) - f(b)] [f(a) - f(c)] } + \frac{ f(b) f(c) a }{ [f(b) - f(a)] [f(b) - f(c)] } + \frac{ f(c) f(a) b }{ [f(c) - f(a)] [f(c) - f(b)] }
    $$
