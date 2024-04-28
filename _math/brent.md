@@ -25,7 +25,9 @@ multicriteria optimization and finding any feasible solutions.
 
 # Convergence rate
 
-Used interchangeably with _order of convergence_ within _numerical analysis_. This term describes how quickly a sequence of approximations approaches a true solution. A higher rate of convergence means that the error between the estimated $x^*$ and true $x$ decreases more rapidly.
+Used interchangeably with _order of convergence_ within _numerical analysis_. 
+This term describes how quickly a sequence of approximations approaches a true solution. 
+A higher rate of convergence means that the error between the estimated $x^*$ and true $x$ decreases more rapidly.
 
 $$ \lim_{k\to\infty} \frac{x_{k+1} - x^*}{(x_k - x^*)^p} = C,$$
 
@@ -56,6 +58,11 @@ Usually, Brent's method starts with GSS (2 iterations) and then uses SPI only. I
 
 <h3 style="text-align: center;"> p = 1.325   (worst case p = 1) </h3>
 
-In Python scipy
 
-# Brent-
+# Secant
+
+We start with 2 points ($x_1, x_2$), then draw a secant through them and where this line intersect the X-axis we get new point $ x_3 $. Then we draw new secant through ($x_2, x_2$) e.t.c.
+ 
+
+# Bisection
+# Brent-Dekker method
