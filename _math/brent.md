@@ -13,7 +13,7 @@ title: "Optimization (Brent-Dekker, Brent's method)"
 
 Optimization problems often directly translated into minization problem.
 It is because many problems are naturally framed as minimization
-(e.g. cost reduction, error minimization, e.t.c.).
+(e.g. cost reduction, error minimization, etc.).
 
 Even if a problem is initially framed as maximizing something, it can easily be 
 transformed into a minimization problem via inverse:
@@ -40,11 +40,11 @@ Examples of convergence:
 * Superlinear: faster then linear (not necessarily with fixed order e.g. 1.5, 1.8)
 
 
-# Brent's minimization
+# Brent's minimization method
 
-Not to be confused with the Brent-Dekkers method, which is also called _Brent method_.
+Not to be confused with the Brent-Dekkers method, also called _Brent method_. The main difference is in the primary approach, one for minimization and the other for finding roots.
 
-First of all, it is an algorithm for minimization without derivatives. Also, it is by far the best in comparison with all other search techniques (Ternary, Dichotomous, Fibonacci, e.t.c). 
+First of all, it is an algorithm for minimization without derivatives. Also, it is by far the best in comparison with all other search techniques (Ternary, Dichotomous, Fibonacci, etc.).
 
 Brent's method uses **Golden-section search** and **Succesive Parabolic Interpolation** (SPI), because the first one has guarantee to find minimum (_converge_), while SPI will not guarantee the convergence, however, if it does converge, it will do it quickly. Convergence in a reasonable number of steps is guaranteed for any function.
 
@@ -54,17 +54,96 @@ Brent's method uses **Golden-section search** and **Succesive Parabolic Interpol
 | Linear convergence      | Bisection       | Golden section search | 
 | Superlinear convergence | Successive linear interpolation         | SPI| 
 
-Usually, Brent's method starts with GSS (2 iterations) and then uses SPI only. It is a commonly met case when Brent's method finds an answer on the 1st iteration, but it doesn't know that because of the significant interval.
+Usually, Brent's method starts with GSS (2 iterations) and then uses SPI only. It is a commonly met case when Brent's method finds an answer on the 1-st iteration, but it doesn't know that because of the significant interval.
 
-<h3 style="text-align: center;"> p = 1.325   (worst case p = 1) </h3>
+<h4 style="text-align: center;"> p = 1.325 (worst case p = 1) </h4>
 
 
-# Secant
+# Brent-Dekker root-finding method
+
+## Secant
 
 We start with 2 points ($x_1, x_2$), then draw a secant through them and where this line intersect the X-axis we get new point $ x_3 $. Then we draw new secant through ($x_2, x_2$) etc.
 
 ![Secant](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/42419738-7f40-49e1-bee6-550a46bfc10d)
 
+Fast $p \approx 1.618$, but can easily diverge (no intersection with X-axis) or divide by zero. 
 
-# Bisection
-# Brent-Dekker method
+## Bisection
+
+We are given 2 points $a$ and $b$, with a constraint that:
+
+$$ \begin{cases} 
+sign[f(a)] = -1 \\
+sign[f(b)] = 1
+\end{cases}$$
+
+Since they have different signs, this interval must contain root.
+
+Then we compute the midpoint
+
+$$c = \frac{a+b}{2},$$
+
+and test it sign
+
+$$ \begin{cases} 
+a = c, \text{ if sign(c) = -1} \\ 
+b = c, \text{ otherwise.}
+\end{cases}$$
+
+
+
+Guaranteed convergence with $p \approx 1$
+
+
+## Dekker's 
+
+
+Uses secant and bisection methods. The idea here is to use secant when we can; if we cannot, use bisection.
+
+It is atleast as good as bisection.
+
+Consider the function $ f(x) $. 
+
+1. **Secant step:** Calculate the secant approximation:
+   $$
+   s = b - f(b) \cdot \frac{b - a}{f(b) - f(a)}
+   $$
+   If $ s $ is within $[a, b]$, update either $ a $ or $ b $ based on the sign of $ f(s) $.
+
+2. **Bisection step:** If the secant step does not yield a satisfactory result, or if $ s $ lies outside $[a, b]$, apply the bisection method:
+   $$
+   c = \frac{a + b}{2}
+   $$
+   Then update $ a $ or $ b $ based on the sign of $ f(c) $.
+
+## Brent-Dekker's method
+
+Brent's method combines the bisection method, the secant method, and inverse quadratic interpolation to find a root of a function with higher efficiency and reliability. The method continuously narrows the interval containing the root until it converges to a high precision.
+
+1. **Inverse Quadratic Interpolation (IQI):**
+
+    Interpolating with parabola, however inverse because root's can be imaginary.
+
+   If $f(a)$, $f(b)$, and $f(c)$ (where $c$ is a previous value in the iteration different from $a$ and $b$) are distinct, use inverse quadratic interpolation:
+   $$
+   p = \frac{ f(a) f(b) c }{ [f(a) - f(b)] [f(a) - f(c)] } + \frac{ f(b) f(c) a }{ [f(b) - f(a)] [f(b) - f(c)] } + \frac{ f(c) f(a) b }{ [f(c) - f(a)] [f(c) - f(b)] }
+   $$
+
+2. **Secant:**
+   Use the secant formula to estimate the root:
+   $$
+   s = b - f(b) \cdot \frac{b - a}{f(b) - f(a)}
+   $$
+
+3. **Bisection:**
+   If the previous methods do not progress adequately:
+   $$
+   c = \frac{a + b}{2}
+   $$
+   Update $a$ or $b$ based on where the sign changes to ensure the root remains bracketed.
+
+The method prioritizes the quadratic interpolation when feasible, as it generally converges faster. However, it falls back to the secant method or bisection method when necessary.
+
+Achieves superlinear convergence with rate $ p \approx 1.324$.
+
