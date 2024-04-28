@@ -61,8 +61,10 @@ Usually, Brent's method starts with GSS (2 iterations) and then uses SPI only. I
 
 # Secant
 
-We start with 2 points ($x_1, x_2$), then draw a secant through them and where this line intersect the X-axis we get new point $ x_3 $. Then we draw new secant through ($x_2, x_2$) e.t.c.
- 
+We start with 2 points ($x_1, x_2$), then draw a secant through them and where this line intersect the X-axis we get new point $ x_3 $. Then we draw new secant through ($x_2, x_2$) etc.
+
+![Secant](https://github.com/VolShyn/VolShyn.github.io/assets/78854637/42419738-7f40-49e1-bee6-550a46bfc10d)
+
 
 # Bisection
 # Brent-Dekker method
