@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Short-rate models"
+category: finance
+date: 2024-02-04
 ---
 
 

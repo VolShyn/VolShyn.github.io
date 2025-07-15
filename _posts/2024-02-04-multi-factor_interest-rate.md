@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Multi-factor models"
+category: finance
+date: 2024-02-04
 ---
 
 1. TOC

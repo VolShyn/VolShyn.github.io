@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Financial assets"
+category: finance
+date: 2024-02-04
 ---
 
 <sub> An asset is any resource owned or controlled by a business or an economic entity. It is anything (tangible or intangible) that can be used to produce positive economic value. <sub> 
