@@ -1,0 +1,82 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+    <h1 class="page-heading">{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+
+    <!-- Filter buttons -->
+    <div class="filter-buttons" style="margin-bottom: 2rem">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="math">Math</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+        <button class="filter-btn" data-filter="programming">
+            Programming
+        </button>
+    </div>
+
+    <!-- Posts list -->
+    <div class="post-list">
+        {% for post in site.posts %}
+        <article
+            class="post-item"
+            data-category="{{ post.category | default: 'uncategorized' }}"
+        >
+            <h2>
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h2>
+
+            <p class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%b %-d, %Y" }}
+                </time>
+                {% if post.category %} •
+                <span class="post-category"
+                    >{{ post.category | capitalize }}</span
+                >
+                {% endif %}
+            </p>
+
+            {% if post.excerpt %}
+            <p class="post-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+            </p>
+            {% endif %}
+        </article>
+        {% endfor %}
+    </div>
+
+    <!-- JavaScript for filtering -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const postItems = document.querySelectorAll(".post-item");
+
+            filterButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                    const filter = this.getAttribute("data-filter");
+
+                    // Update active button
+                    filterButtons.forEach((btn) =>
+                        btn.classList.remove("active"),
+                    );
+                    this.classList.add("active");
+
+                    // Filter posts
+                    postItems.forEach((item) => {
+                        const category = item.getAttribute("data-category");
+                        if (filter === "all" || category === filter) {
+                            item.style.display = "block";
+                        } else {
+                            item.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</div>
