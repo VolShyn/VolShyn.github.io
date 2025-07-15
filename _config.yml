@@ -1,4 +1,7 @@
 title: Keen notes
+description: Researcher
+# Minima theme shows the site title at least twice in the footer, as a fallback if there is no author, so let's add author:
+author: VS
 github_username: VolShyn
 
 email: vol.shynk@gmail.com
