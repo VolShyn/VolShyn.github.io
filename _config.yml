@@ -1,5 +1,4 @@
 title: Keen notes
-description: Researcher
 github_username: VolShyn
 
 email: vol.shynk@gmail.com
@@ -30,6 +29,3 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
-
-paginate: 10
-paginate_path: "/page:num/"
