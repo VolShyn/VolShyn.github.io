@@ -12,9 +12,9 @@ date: 2025-08-03
 
 ---
 
-Used in WEB applications fot instant, continuous bidirectional (so-called **Full-Duplex** by time slots) data exchange between client and a server.
+Used in a WEB applications for instant, continuous bidirectional (so-called **Full-Duplex** by time slots) data exchange between a client and a server.
 
-{% include info.html text="A server is a program or process that listens for incoming connections or requests, whilst a client is a program or process that initiates connections or sends requests"%}
+{% include info.html text="A server is a program or a process that listens for incoming connections or requests, whilst a client is a program or a process that initiates connections or sends requests"%}
 
 {% include info.html text="Simplex - one-way communication (mobile network station). Half-Duplex - two-way, with one direction at a time (walkie-talkie)"%}
 
